@@ -107,7 +107,3 @@ END
 | New bill type | write **one new class**; nothing existing is edited | edit the enum, the `switch` in `total()`, the struct, and every other `switch` |
 | Safety | compiler forces `total()` to be defined (pure virtual) | forgetting a `case` compiles silently |
 
-## Viva – say it simply
-* **Abstract class** = has a pure virtual function, so you cannot create a `Bill` object; it only gives the common interface.
-* **Why a base-pointer array?** One loop handles every kind of bill; C++ picks the right `total()` at run time.
-* **Why better than switch?** A new bill type is a new class; no working code is touched.
