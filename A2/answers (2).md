@@ -65,7 +65,3 @@ END
 | Space | one vptr (8 bytes) per object | the same: `dynamic_cast` needs the vtable/RTTI, so the vptr is still there |
 | New bill type | one new class | add another `else if` in **every** function that uses the chain |
 
-## Viva – say it simply
-* Virtual function → call decided **at run time** by the **object**; non-virtual → decided **at compile time** by the **pointer type**.
-* vptr = hidden pointer in each object; vtable = one table per class of function addresses.
-* No virtual destructor → derived part is not destroyed → leak / undefined behaviour.
