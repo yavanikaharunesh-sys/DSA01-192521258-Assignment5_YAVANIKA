@@ -67,7 +67,3 @@ covered ← policy(bill)
 | Where is the cover limit kept? | in a named, typed **member variable**, visible and changeable, and the class can have other functions (name, print, validate) | hidden in the **lambda capture** (for `std::function`) or in a global/extra argument (function pointer): hard to inspect or print |
 | Best for | payers with several data items and several operations | small, one-line rules |
 
-## Viva – say it simply
-* `Payer` is an **interface**: "any payer must say how much it covers".
-* New payer = new class; old code is **closed for change, open for extension**.
-* Lambda/`std::function` is lighter, but the data is hidden; a class keeps data and behaviour together.
