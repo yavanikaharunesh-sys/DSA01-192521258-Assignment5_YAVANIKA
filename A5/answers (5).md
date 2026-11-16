@@ -58,7 +58,3 @@ delete p                                    // and again on the normal path
 | Code size | small – no cleanup code in handlers | longer – cleanup repeated in every handler and on the normal path |
 | Places where a leak can occur | **0** (the destructor always runs) | at least one per exit path; **every new error path or new `catch` adds another place** (n paths → n possible leaks, e.g. a `return` or a new exception type with no cleanup) |
 
-## Viva – say it simply
-* **Unwinding** = C++ walks back up the calls, destroying local objects on the way.
-* **RAII** = let an object's destructor do the cleanup, so exceptions cannot cause leaks.
-* **`throw;`** rethrows the same exception; **`throw e;`** makes a copy and may slice it.
