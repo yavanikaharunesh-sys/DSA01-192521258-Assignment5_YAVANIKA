@@ -65,8 +65,3 @@ CALLER: s ← approve(...) ; IF s ≠ OK THEN handle(s)   // after EVERY call, a
 | Extra space | none on the normal path (tables kept by the compiler) | an extra output parameter / status value on every function |
 | Code needed | error handling is written once in the `catch` | every function in the chain must check and pass the code back; forgetting a check **silently loses the error** |
 
-## Viva – say it simply
-* Exception classes in a tree → catch general or specific errors.
-* `noexcept` = promise that a function never throws (destructors, getters).
-* Destructor throws during unwinding → `std::terminate`.
-* Exceptions: rare errors, clean code. Return codes: frequent errors, very fast error path.
