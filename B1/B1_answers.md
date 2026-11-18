@@ -81,7 +81,4 @@ day ← sumAll(opBills) + sumAll(ipBills)                                  // on
 | All kinds in one list? | **yes** (`Bill*` array) | **no** – no single element type holds OP and IP |
 | New bill type | one new class | one more container + one more `sumAll` call in every place that processes bills |
 
-## Viva – say it simply
-* `virtual` = decided by the real object at run time. No `virtual` = decided by the pointer type.
-* Virtual destructor = derived part destroyed too, no leak.
-* Templates are fast but fixed at compile time; virtual functions give one list for everything.
+
