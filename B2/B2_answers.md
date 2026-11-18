@@ -66,7 +66,4 @@ Measured on my machine, 1,000,000 claims (your numbers will differ – run it yo
 * **Space:** `sizeof(double)` = 8, `sizeof(optional<double>)` = 16 (value + "has value" flag).
 * **Trade-off:** `optional` is fast but carries **no reason** for the rejection and every caller must check it; exceptions carry a message and propagate automatically, but are meant for **rare** errors.
 
-## Viva – say it simply
-* Handlers are tried in order; the first matching type wins. `catch (...)` catches anything.
-* `throw;` = pass the same exception on. `throw e;` = copy (may slice).
-* Exceptions: rare errors, readable code. `optional`/return codes: frequent "errors".
+
