@@ -49,6 +49,3 @@ bills ← array of variant ; FOR each b : sum ← sum + VISIT(b, x → x.total()
 * **Space per element:** size of the largest alternative + tag = 24 + 8 = **32 bytes** (measured `sizeof` = 32). Virtual: a 24-byte object + an 8-byte pointer, plus heap overhead for every object.
 * **Cost:** the set of types is fixed at compile time; adding a type means changing the `variant` list.
 
-## Viva – say it simply
-* Virtual costs a little (indirect call + pointer chasing) but gives easy extension.
-* Exceptions are almost free when nothing goes wrong and expensive when thrown, so use them only for exceptional cases.
